@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Buy Now | FashionShowcase</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      background: #f7f7f7;
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+    .container {
+      max-width: 600px;
+      background: white;
+      margin: 30px auto;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      padding: 25px;
+    }
+    h2 {
+      text-align: center;
+      color: #db2777;
+      margin-bottom: 20px;
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin: 10px 0 5px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #bbb;
+      margin-bottom: 12px;
+      font-size: 14px;
+    }
+    .btn {
+      background: #db2777;
+      border: none;
+      width: 100%;
+      padding: 12px;
+      color: white;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background: #b81c64;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Buy Product</h2>
+
+  <!-- YAHAN IMPORTANT CHANGE HAI -->
+  <form action="order-success.html" method="get">
+    <label>Full Name</label>
+    <input type="text" name="name" required placeholder="Enter your name">
+
+    <label>Mobile Number</label>
+    <input type="text" name="phone" required placeholder="Enter your phone number">
+
+    <label>Email</label>
+    <input type="email" name="email" placeholder="Enter your email">
+
+    <label>Delivery Address</label>
+    <textarea name="address" required placeholder="House No, Street, City, State, Pincode"></textarea>
+
+    <label>Product Size</label>
+    <select name="size" required>
+      <option value="">Select size</option>
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+      <option>XXL</option>
+    </select>
+
+    <label>Payment Method</label>
+    <select name="payment" required>
+      <option value="">Select payment</option>
+      <option>Cash on Delivery</option>
+      <option>UPI / Online Payment</option>
+      <option>Debit / Credit Card</option>
+    </select>
+
+    <!-- YE SUBMIT BUTTON HAI, AB JS KI JARURAT NAHI -->
+    <button type="submit" class="btn">Confirm Order</button>
+  </form>
+</div>
+
+</body>
+</html>
